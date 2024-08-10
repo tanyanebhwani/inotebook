@@ -63,7 +63,6 @@ router.post('/login', [
         if (!user) {
             return res.status(400).json({ success,error: "Please try to login with correct credentials" })
         }
-        console.log(user.password);
         const passwordCompare = bcrypt.compare(password, user.password);
         if (!passwordCompare) {
             return res.status(400).json({ success,error: "Please try to login with correct credentials" });
@@ -90,7 +89,6 @@ router.post('/getUser',fetchUser, async (req, res) => {
     }
     try {
         const userId = req.user.id;
-        console.log(userId);
         const user = await User.findById(userId).select("-password");
         success = true;
         res.send({success,user});

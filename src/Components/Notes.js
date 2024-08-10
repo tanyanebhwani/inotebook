@@ -7,6 +7,7 @@ import Button from 'react-bootstrap/Button';
 import { useNavigate } from 'react-router-dom';
 const Notes = (props) => {
   const context = useContext(noteContext);
+  console.log(context);
   const { notes, getNotes, editNote } = context;
   const ref = useRef(null);
   const refClose = useRef(null);

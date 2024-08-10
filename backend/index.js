@@ -4,7 +4,7 @@ var dotenv = require('dotenv');
 const { default: mongoose, Mongoose } = require('mongoose');
 dotenv.config();
 mongoose.connect(
-  `mongodb+srv://${process.env.MONGODB_USERNAME}:${process.env.MONGODB_PASSWORD}@cluster0.di4bo.mongodb.net/inotebook`, 
+  `mongodb+srv://${process.env.MONGODB_USERNAME}:${process.env.MONGODB_PASSWORD}@cluster0.di4bo.mongodb.net/inotebook?retryWrites=true&w=majority`, 
   {
     useNewUrlParser: true,
     useUnifiedTopology: true

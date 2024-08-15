@@ -1,0 +1,192 @@
+
+/* Basic Section Styling */
+.services-section {
+    padding: 50px 20px;
+    text-align: center;
+}
+.services-section::before {
+    content: "";
+    position: absolute;
+    top: 9vh;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0.15;
+    background-image: url('services-background.jpg');
+    background-size: cover;
+    height: 281vh;
+}
+
+
+/* Section Title */
+.services-section h2 {
+    font-size: 3rem;
+    font-weight: 800;
+    color: #333;
+    margin-bottom: 100px;
+    opacity: 0;
+    animation: fadeInTitle 1.2s ease forwards;
+}
+
+/* Container for Service Cards */
+.services-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+    opacity: 0;
+    animation: fadeInContainer 1.5s ease forwards;
+    animation-delay: 0.5s;
+}
+
+/* Service Card Styling */
+.service-card {
+    height: 300px;
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    margin-bottom: 200px;
+}
+
+/* Odd Cards: Image Left, Content Right */
+.service-card.odd-card {
+    flex-direction: row;
+}
+
+/* Even Cards: Image Right, Content Left */
+.service-card.even-card {
+    flex-direction: row-reverse;
+}
+
+/* Image Styling */
+.service-image {
+    width: 400px;
+    height: 400px;
+    opacity: 0;
+    animation: fadeInImage 0.8s ease forwards;
+    animation-delay: 0.2s;
+}
+
+.service-card.odd-card .service-image{
+    position: relative;
+    left: 50px;
+}
+
+.service-card.even-card .service-image{
+    position: relative;
+    right: 50px;
+}
+
+.service-image img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Content Styling */
+.service-content {
+    font-family: "Baloo Bhaina 2", sans-serif;
+    padding: 50px;
+    width: 55%;
+    text-align: center;
+    opacity: 0;
+    animation: fadeInContent 0.8s ease forwards;
+    animation-delay: 0.2s;
+}
+
+.service-content h3 {
+    font-size: 2em;
+    color: #66b3b7;
+    margin-bottom: 15px;
+}
+
+.service-content p {
+    font-size: 1.5rem;
+    color: #555;
+}
+
+/* Hover Effect for Cards */
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Fade-in Animations */
+@keyframes fadeInTitle {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInContainer {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInImage {
+    0% {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInContent {
+    0% {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.service-card.even-card .service-image {
+    animation: fadeInImageEven 0.8s ease forwards;
+}
+
+.service-card.even-card .service-content {
+    animation: fadeInContentEven 0.8s ease forwards;
+}
+
+@keyframes fadeInImageEven {
+    0% {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInContentEven {
+    0% {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}

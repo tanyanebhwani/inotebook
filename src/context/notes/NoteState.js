@@ -16,7 +16,7 @@ const NoteState = (props) => {
         }
       });
       const json = await response.json();
-      setNotes(json);
+      setNotes(json.notes);
     }
     catch (error) {
       console.log(error);
@@ -33,7 +33,9 @@ const NoteState = (props) => {
       },
       body: JSON.stringify({ title, description, tag })
     });
-    setNotes(notes.concat(await response.json()));
+    const data = await response.json();
+    const note = { title: data.savedNote.title , description: data.savedNote.description , tag: data.savedNote.tag};
+    setNotes(notes.concat(note));
   };
   //edit note
   const editNote = async (id, title, description, tag) => {

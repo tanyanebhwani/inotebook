@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom';
 import { useLocation } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
+import '../global.css';
 const Navbar = () => {
   let navigate = useNavigate();
   let location = useLocation();
@@ -10,7 +11,7 @@ const Navbar = () => {
     navigate("/login");
   }
   return (
-    <nav className="navbar navbar-expand-lg bg-body-tertiary">
+    <nav className="navbar navbar-expand-lg bg-body-tertiary navbar-custom">
   <div className="container-fluid">
     <a className="navbar-brand" href="/">iNotebook</a>
     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -24,9 +25,21 @@ const Navbar = () => {
         <li className="nav-item">
           <Link className={`nav-link ${location.pathname==="/about"?"active":""}`} to="/about">About</Link>
         </li>
+        <li className="nav-item">
+          <a className = 'nav-link' href='/' >Services</a>
+        </li>
+        <li className="nav-item">
+          <a className = 'nav-link' href='/' >Blog</a>
+        </li>
+        <li className="nav-item">
+          <a className = 'nav-link' href='/' >Help</a>
+        </li>
+        <li className="nav-item">
+          <a className = 'nav-link' href='/' >Contact</a>
+        </li>
       </ul>
-      {!localStorage.getItem('token')?<><Link className="btn btn-primary mx-2" to="/login" role="button">LogIn</Link>
-      <Link className="btn btn-primary mx-2" to="/signup" role="button">SignUp</Link></>:<button className="btn btn-primary mx-2" onClick={handleLogOut}>LogOut</button>}
+      {!localStorage.getItem('token')?<><Link className="bttn btn-log-in mx-2" to="/login" role="button">LogIn</Link>
+      <Link className="bttn btn-signup mx-2" to="/signup" role="button">SignUp</Link></>:<button className="bttn btn-log-out mx-2" onClick={handleLogOut}>LogOut</button>}
     </div>
   </div>
 </nav>

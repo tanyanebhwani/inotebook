@@ -30,27 +30,27 @@ const Signup = (props) => {
             }
     }
   return (
-    <div className='mt-3'>
-        <h2>Create an Account</h2>
-        <form onSubmit={handleSubmit}>
-                <div className="mb-3">
+    <div className='mt-3 signup-container'>
+        <h2 id='signupHead'>Create an Account</h2>
+        <form onSubmit={handleSubmit} className='signup-form'>
+                <div className="mb-3 my-4">
                     <label htmlFor="name" className="form-label">Name</label>
                     <input type="text" className="form-control" id="name" name="name" aria-describedby="emailHelp" onChange={onChange} required/>
                 </div>
-                <div className="mb-3">
+                <div className="mb-3 my-4">
                     <label htmlFor="email" className="form-label">Email address</label>
                     <input type="email" className="form-control" id="email" name="email" aria-describedby="emailHelp" onChange={onChange} required/>
                         <div id="emailHelp" className="form-text">We'll never share your email with anyone else.</div>
                 </div>
-                <div className="mb-3">
+                <div className="mb-3 my-4">
                     <label htmlFor="password" className="form-label">Password</label>
                     <input type="password" className="form-control" id="password" name="password" onChange={onChange} required minLength={5}/>
                 </div>
-                <div className="mb-3">
+                <div className="mb-3 my-4">
                     <label htmlFor="cpassword" className="form-label">Confirm Password</label>
                     <input type="password" className="form-control" id="cpassword" name="cpassword" onChange={onChange} required minLength={5}/>
                 </div>
-                <button disabled={user.name<5||user.password<5||user.password!==user.cpassword||user.password<5} type="submit" className="btn btn-primary">Submit</button>
+                <button disabled={user.name<5||user.password<5||user.password!==user.cpassword||user.password<5} type="submit" className="bttn btn-log-in" id='login'>Submit</button>
             </form>
     </div>
   )

@@ -1,0 +1,348 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhaina+2:wght@400..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+body{
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+}
+.navbar{
+  background-color: white;
+  font-family: "Baloo Bhaina 2", sans-serif;
+}
+.navbar-brand{
+  padding: 0 10vw 0 20vw;
+}
+.nav-item{
+  padding: 0 5px;
+}
+.App {
+  text-align: center;
+}
+.buttons{
+  display: flex;
+  justify-content: space-between;
+}
+.navbar .navbar-nav{
+  margin-right: 60px;
+}
+.bttn{
+  padding: 10px 50px;
+  border-radius: 0;
+  margin: 10px 50px; 
+}
+.navbar .btn-log-in{
+  background-color: black;
+  color: white;
+}
+.navbar .btn-log-in:hover{
+  background-color: transparent;
+  color: black;
+  border: 2px solid black;
+}
+.navbar .btn-log-out{
+  background-color: black;
+  color: white;
+}
+.navbar .btn-log-out:hover{
+  background-color: transparent;
+  color: black;
+  border: 2px solid black;
+}
+.navbar .btn-signup{
+  background-color: transparent;
+  border: 2px solid black;
+  color: black;
+}
+.navbar .btn-signup:hover{
+  background-color: rgb(208, 235, 226);
+  border: 2px solid black;
+}
+.container{
+  background-color: white;
+  padding: 50px!important;
+  margin: 50px auto;
+}
+.add-note-head{
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 60px;
+  font-weight: 800;
+}
+#loginHead{
+  font-size: 2rem;
+  font-weight: 300;
+  text-align: center;
+  margin-bottom: 60px;
+}
+.form-label{
+  font-size: 1rem;
+}
+#loginForm .form-control{
+  margin-bottom: 60px 0!important;
+}
+.login-form .btn{
+  padding: 10px 50px;
+  border-radius: 0;
+  margin: 10px 0; 
+}
+.login-form .btn-log-in{
+  background-color: black;
+  color: white;
+}
+.login-form .btn-log-in:hover{
+  background-color: transparent;
+  border: 2px solid black;
+  color: black;
+}
+.edit-form{
+  padding: 20px 40px;
+  font-family: "Baloo Bhaina 2", sans-serif;
+}
+.signup-container{
+  padding: 10px 50px;
+  border-radius: 0;
+  margin: 10px 0;
+}
+#signupHead{
+  font-size: 2rem;
+  font-weight: 300;
+  text-align: center;
+  margin-bottom: 60px;
+}
+.signup-form .btn{
+  padding: 10px 50px;
+  border-radius: 0;
+  margin: 20px 0; 
+}
+#addForm{
+  margin: 50px;
+}
+#addForm .btn{
+  padding: 10px 50px;
+  border-radius: 0;
+  margin: 10px 0;
+}
+#addForm .btn-add-note{
+  background-color: black!important;
+  color: white!important;
+}
+#addForm .btn-add-note:hover{
+  background-color: transparent!important;
+  border: 2px solid black!important;
+  color: black!important;
+}
+#login{
+  background-color: black;
+  color: white;
+}
+#addForm .btn-reset{
+  background-color: transparent;
+  color: black;
+  border: 2px solid black; 
+}
+#addForm .btn-reset:hover{
+  background-color: rgb(208, 235, 226);
+  border: 2px solid black; 
+}
+.note-items{
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
+}
+.note-items .note-item{
+  margin: 10px;
+  width: 31%;
+  padding: 10px 20px;
+}
+.card-title{
+  font-size: 1rem;
+}
+.card-subtitle{
+  font-size: 0.75rem;
+}
+.card-text{
+  font-size: 0.8rem;
+}
+#notesHeading{
+  font-size: 2rem;
+  margin-bottom: 30px;
+  font-weight: 800;
+  text-align: center;
+}
+#editHead{
+  font-size: 2rem;
+  font-family: "Poppins", sans-serif;
+  margin: 15px 50px;
+  font-weight: 300;   
+}
+.modal-dialog .modal-content{
+  border: 2px solid black;
+  border-radius: 0;
+}
+.modal .edit-header{
+  padding: 0;
+}
+.modal .modal-footer{
+  display: flex;
+  justify-content: space-between;
+}
+.modal-footer .btn-close-modal{
+  padding: 15px 48px;
+  border-radius: 0;
+  margin-left: 50px;
+  color: black;
+  background-color: transparent;
+  border: 2px solid black;
+}
+.modal-footer .btn-close-modal:hover{
+  color: black;
+  background-color: rgb(208, 235, 226);
+  border: 2px solid black;
+}
+.modal-footer .btn-update-note{
+  padding: 15px 20px;
+  border-radius: 0;
+  margin-right: 50px;
+  color: white;
+  background-color: black;
+}
+.modal-footer .btn-update-note:hover{
+  color: black;
+  background-color: transparent;
+  border: 2px solid black;
+}
+.content{
+  height: 120vh;
+  width:100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.content::before{
+  content: '';
+  position: absolute;
+  height: 123vh;
+  top: 9vh;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0.15;
+  background-image: url('./Components/services-background.jpg');
+  background-size: cover;
+}
+
+.about-section{
+  height: 80vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: white;
+  z-index: 1;
+  padding: 100px;
+}
+.about-section-content{
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 25px;
+}
+.about-image{
+  width: 40%;
+  background-image: url('../about-image.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 30px -120px;
+}
+.about-head{
+  margin-bottom: 80px;
+  font-size: 2rem!important;
+  font-weight: 700; 
+}
+.about-section-content h1{
+  font-size: 5rem!important;
+}
+.about-passage{
+  font-size: 1.25rem!important;
+  text-align: justify;
+  font-family: "Baloo Bhaina 2", sans-serif;
+  margin-bottom: 80px;
+  font-weight: 300;
+}
+.btn-read-more{
+  width: 100%;
+  padding: 15px 0;
+  background-color: black;
+  color: white;
+  font-size: 1.25rem;
+}
+.blog-section-2 .blog-item{
+  padding: 40px 20px!important;
+}
+.social-icons{
+  width: 150px;
+  display: flex;
+  justify-content: space-evenly;
+}
+.social-item{
+  background-size: cover;
+  width: 24px;
+  height: 24px;
+}
+.item-1{
+  background-image: url('../facebook-svg.svg');
+}
+.item-2{
+  background-image: url('../instagram-svg.svg');
+}
+.item-3{
+  background-image: url('../twitter-svg.svg');
+}
+.footer{
+  background-color: rgb(248,249,250);
+}
+.bg-blue{
+  background-color: #66b3b7; 
+}
+.blog-content::before{
+  content: '';
+  position: absolute;
+  height: 182vh;
+  top: 9vh;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0.15;
+  background-image: url('./Components/blog-background.jpg');
+  background-size: cover; 
+}
+.background::before{
+  content: '';
+  position: absolute;
+  height: 68vh;
+  top: 9vh;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0.30;
+  background-image: url('./Components/login-background.jpg');
+  background-size: cover; 
+}
+.container{
+  position: relative;
+  z-index: 100;
+  background-color: white;
+}
+.add-note-background::before{
+  content: '';
+  position: absolute;
+  height: 160vh;
+  top: 9vh;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0.30;
+  background-image: url('./Components/add-note-background.jpg');
+  background-size: cover;
+}

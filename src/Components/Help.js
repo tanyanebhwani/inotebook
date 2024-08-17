@@ -23,7 +23,7 @@ const Help = (props) => {
             document.getElementsByClassName('v-email-valid')[0].style.display = 'block';
         }
         if (isValid) {
-            const response = await fetch('https://inotebook-z6r2.onrender.com/api/faq', {
+            const response = await fetch('https://inotebook-z6r2.onrender.com/api/help/faq', {
                 method: 'POST',
                 headers: {
                     'Content-type': 'application/json',
@@ -31,7 +31,6 @@ const Help = (props) => {
                 body: JSON.stringify({ email: email, question: question })
             });
             const json = await response.json();
-            console.log(json);
             if (json.success) {
                 props.showAlert("query sent successfully", "success");
             }

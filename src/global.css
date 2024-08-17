@@ -101,6 +101,13 @@ html,body{
   background-color: rgb(208, 235, 226);
   border: 2px solid black;
 }
+#root .alert{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  height: 90px;
+}
 .container{
   background-color: white;
   padding: 50px!important;

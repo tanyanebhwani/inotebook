@@ -1,5 +1,10 @@
-
+body,html{
+    height: 100%;
+}
 /* Basic Section Styling */
+#root{
+    position: relative;
+}
 .services-section {
     padding: 50px 20px;
     text-align: center;
@@ -14,7 +19,8 @@
     opacity: 0.15;
     background-image: url('services-background.jpg');
     background-size: cover;
-    height: 281vh;
+    background-position: center;
+    min-height: 100%;
 }
 
 
@@ -190,3 +196,130 @@
         transform: translateX(0);
     }
 }
+@media screen and (max-width: 1388px) {
+    .service-card{
+        width: 90%;
+    }
+  }
+  @media screen and (max-width: 1065px) {
+    .services-section h2{
+        font-size: 3rem;
+    }
+    .service-content h3{
+        font-size: 1.5rem;
+    }
+    .service-content p{
+        font-size: 1rem;
+    }
+    .service-card.odd-card .service-image{
+        margin-right: 20px;
+    }
+    .service-card.even-card .service-image{
+        margin-left: 20px;
+    }
+  }
+  @media screen and (max-width: 822px) {
+    .service-card{
+        height: 200px;     
+    }
+    .service-image{
+        height: 300px;
+        width: 300px;
+    }
+    .service-content h3{
+        font-size: 1rem;
+    }
+    .service-content p{
+        font-size: 0.75rem;
+    }
+  }
+  @media screen and (max-width: 735px) {
+    .service-card{
+        height: 150px;
+        margin-bottom: 100px;     
+    }
+    .service-image{
+        height: 200px;
+        width: 200px;
+    }
+    .service-content h3{
+        font-size: 1rem;
+    }
+    .service-content p{
+        font-size: 0.75rem;
+    }
+    .service-card.odd-card .service-image{
+        left: 25px;
+    }
+    .service-card.even-card .service-image{
+        right: 25px;
+    }
+  }
+  @media screen and (max-width: 599px) {
+    .services-section h2{
+        font-size: 2rem;
+    }
+    .service-card{
+        height: 150px;     
+    }
+    .service-image{
+        height: 200px;
+        width: 200px;
+    }
+    .service-content h3{
+        font-size: 1rem;
+    }
+    .service-content p{
+        font-size: 0.75rem;
+    }
+  }
+  @media screen and (max-width: 516px) {
+    .service-card{
+        margin-bottom: 50px;
+    }
+    .services-section h2{
+        margin-bottom: 50px;
+    }
+  }
+  @media screen and (max-width: 522px) {
+    .services-section h2{
+        font-size: 1.5rem;
+    }
+    .service-card{
+        height: 200px;     
+    }
+    .service-image{
+        height: 180px;
+        width: 180px;
+    }
+    .service-content h3{
+        font-size: 0.8rem;
+        margin-bottom: 10px;
+    }
+    .service-content p{
+        font-size: 0.5rem;
+    }
+  }
+  @media screen and (max-width: 465px) {
+    .services-section h2{
+        font-size: 1.5rem;
+    }
+    .service-card{
+        height: 150px;
+        width: 98%;     
+    }
+    .service-image{
+        height: 130px;
+        width: 130px;
+    }
+    .service-content h3{
+        font-size: 0.8rem;
+        margin-bottom: 10px;
+    }
+    .service-content p{
+        font-size: 0.5rem;
+    }
+    .service-content{
+        padding: 10px;
+    }
+  }

@@ -1,13 +1,8 @@
 import React from 'react'
 
 const Blog = () => {
-    const style = {
-        width: '70%',
-        backgroundColor: `transparent`
-    };
     return (
         <div class="blog-content">
-            <div className="container" style={style}>
             <div class="p-4 p-md-5 mb-4 rounded text-body-emphasis bg-blue">
                 <div class="col-lg-6 px-0">
                     <h1 class="display-4 fst-italic">5 Reasons to Switch to Cloud</h1>
@@ -15,7 +10,7 @@ const Blog = () => {
                     <p class="lead mb-0"><a href="#" class="text-body-emphasis fw-bold">Continue reading...</a></p>
                 </div>
             </div>
-
+        <div className="blog-container">
             <div class="row mb-2 blog-section-2">
                 <div class="col-md-6">
                     <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">

@@ -1,9 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Baloo+Bhaina+2:wght@400..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-body{
+html,body{
   margin: 0;
   padding: 0;
   font-family: "Poppins", sans-serif;
   font-style: normal;
+  height: 100%;
 }
 .navbar{
   background-color: white;
@@ -25,16 +26,37 @@ body{
 .navbar .navbar-nav{
   margin-right: 60px;
 }
-.bttn{
-  padding: 10px 50px;
+.navbar .bttn{
+  padding: 7px 50px;
   border-radius: 0;
   margin: 10px 50px; 
 }
 .navbar .btn-log-in{
   background-color: black;
   color: white;
+  padding: 4px 50px;
 }
 .navbar .btn-log-in:hover{
+  background-color: transparent;
+  color: black;
+  border: 2px solid black;
+}
+
+.res-button-section .btn-log-in{
+  background-color: black;
+  color: white;
+  padding: 7px 50px;
+}
+.res-button-section .btn-log-in:hover{
+  background-color: transparent;
+  color: black;
+  border: 2px solid black;
+}
+.signup-form #login{
+  background-color: black;
+  color: white;
+}
+.signup-form #login:hover{
   background-color: transparent;
   color: black;
   border: 2px solid black;
@@ -42,8 +64,19 @@ body{
 .navbar .btn-log-out{
   background-color: black;
   color: white;
+  padding: 4px 50px;
 }
 .navbar .btn-log-out:hover{
+  background-color: transparent;
+  color: black;
+  border: 2px solid black;
+}
+.res-button-section .btn-log-out{
+  background-color: black;
+  color: white;
+  padding: 4px 50px;
+}
+.res-button-section .btn-log-out:hover{
   background-color: transparent;
   color: black;
   border: 2px solid black;
@@ -52,8 +85,19 @@ body{
   background-color: transparent;
   border: 2px solid black;
   color: black;
+  padding: 4px 50px;
 }
 .navbar .btn-signup:hover{
+  background-color: rgb(208, 235, 226);
+  border: 2px solid black;
+}
+.res-button-section .btn-signup{
+  background-color: transparent;
+  border: 2px solid black;
+  color: black;
+  padding: 4px 50px;
+}
+.res-button-section .btn-signup:hover{
   background-color: rgb(208, 235, 226);
   border: 2px solid black;
 }
@@ -70,7 +114,7 @@ body{
 }
 #loginHead{
   font-size: 2rem;
-  font-weight: 300;
+  font-weight: 800;
   text-align: center;
   margin-bottom: 60px;
 }
@@ -80,7 +124,7 @@ body{
 #loginForm .form-control{
   margin-bottom: 60px 0!important;
 }
-.login-form .btn{
+.login-form .bttn{
   padding: 10px 50px;
   border-radius: 0;
   margin: 10px 0; 
@@ -101,11 +145,13 @@ body{
 .signup-container{
   padding: 10px 50px;
   border-radius: 0;
-  margin: 10px 0;
+  margin: auto;
+  width: 70%;
+  border: 10px solid black;
 }
 #signupHead{
   font-size: 2rem;
-  font-weight: 300;
+  font-weight: 800;
   text-align: center;
   margin-bottom: 60px;
 }
@@ -117,7 +163,7 @@ body{
 #addForm{
   margin: 50px;
 }
-#addForm .btn{
+#addForm .bttn{
   padding: 10px 50px;
   border-radius: 0;
   margin: 10px 0;
@@ -134,6 +180,7 @@ body{
 #login{
   background-color: black;
   color: white;
+  padding: 7px 50px;
 }
 #addForm .btn-reset{
   background-color: transparent;
@@ -212,7 +259,7 @@ body{
   border: 2px solid black;
 }
 .content{
-  height: 120vh;
+  height: 180vh;
   width:100%;
   display: flex;
   align-items: center;
@@ -221,7 +268,7 @@ body{
 .content::before{
   content: '';
   position: absolute;
-  height: 123vh;
+  height: 100%;
   top: 9vh;
   left: 0;
   right: 0;
@@ -250,10 +297,10 @@ body{
 }
 .about-image{
   width: 40%;
-  background-image: url('../about-image.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: 30px -120px;
+}
+.about-image img{
+  width: 100%;
+  height: 100%;
 }
 .about-head{
   margin-bottom: 80px;
@@ -305,10 +352,21 @@ body{
 .bg-blue{
   background-color: #66b3b7; 
 }
+.blog-container{
+  width: 70%;
+  background-color: transparent;
+  margin: auto;
+  margin-top: 20px;
+}
+.bg-blue{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 .blog-content::before{
   content: '';
   position: absolute;
-  height: 182vh;
+  height: 100%;
   top: 9vh;
   left: 0;
   right: 0;
@@ -320,7 +378,7 @@ body{
 .background::before{
   content: '';
   position: absolute;
-  height: 68vh;
+  height: 100%;
   top: 9vh;
   left: 0;
   right: 0;
@@ -337,7 +395,7 @@ body{
 .add-note-background::before{
   content: '';
   position: absolute;
-  height: 160vh;
+  height: 100%;
   top: 9vh;
   left: 0;
   right: 0;
@@ -345,4 +403,136 @@ body{
   opacity: 0.30;
   background-image: url('./Components/add-note-background.jpg');
   background-size: cover;
+}
+.signup-content{
+  height: 100%;
+}
+.signup-content::before{
+content: '';
+position: absolute;
+top: 5vh;
+left: 0;
+right: 0;
+bottom: 0;
+opacity: 0.15;
+height:100%;
+background-image: url('Components/contact-background.jpg');
+background-size: cover;
+z-index: -1;
+}
+.signup-form{
+  z-index: 100;
+}
+.res-button-section{
+  display: none;
+}
+@media screen and (max-width: 1704px) {
+  .about-section-content h1{
+    font-size: 4rem!important;
+  }
+  .about-image{
+    margin-left: 40px;
+  }
+}
+@media screen and (max-width: 1439px) {
+  .about-section-content h1{
+    font-size: 3rem!important;
+  }
+}
+@media screen and (max-width: 1236px) {
+  .res-button-section{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    height: 60px;
+  }
+  .button-section{
+    display: none;
+  }
+  .content{
+    height: 130vh;
+  }
+  .about-section{
+    height: 100vh;
+    flex-direction: column;
+    align-items: center;
+  }
+  .about-section-content{
+    width: 100%;
+  }
+  .about-image img{
+    width: 50vh;
+  }
+  .about-image{
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+@media screen and (max-width: 960px) {
+  .blog-container{
+    width: 90%;
+  }
+}
+@media screen and (max-width: 740px) {
+  .about-section{
+    height: 120vh;
+  }
+}
+@media screen and (max-width: 715px) {
+  .about-image img{
+    height: 30vh;
+    width: 30vh;
+  }
+}
+@media screen and (max-width: 687px) {
+  #loginHead{
+    font-size: 2rem;
+  }
+  #signupHead{
+    font-size: 2rem;
+  }
+}
+@media screen and (max-width: 600px) {
+  
+}
+@media screen and (max-width: 531px) {
+  .signup-form .form-control{
+    width: 98%;
+  }
+  #signupHead{
+    margin-bottom: 10px;
+  }
+  .signup-form{
+    width: 100%;
+  }
+  .signup-container{
+    width: 100%;
+  }
+}
+@media screen and (max-width: 514px) {
+  .about-section{
+    padding: 50px;
+  }
+}
+
+@media screen and (max-width: 497px) {
+  .about-image img{
+    width: 20vh;
+    height: 20vh;
+  }
+}
+@media screen and (max-width: 441px) {
+  #loginHead{
+    font-size: 2rem;
+  }
+}
+@media screen and (max-width: 419px) {
+  .about-section{
+    padding: 25px;
+  }
 }

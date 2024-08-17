@@ -11,7 +11,6 @@ const Addnote = (props) => {
   const addNote = context.addNote;
 
   const style = {
-    border: `1px solid black`,
     width: '70%'
   };
 

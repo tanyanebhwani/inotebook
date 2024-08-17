@@ -26,6 +26,8 @@ app.use(cors());
 //Available Routes
 app.use('/api/auth',require('./routes/auth'));
 app.use('/api/notes',require('./routes/notes'));
+app.use('/api',require('./routes/contact'));
+app.use('/api/help',require('./routes/faq'));
 app.get('/', (req, res) => {
   res.send('Hello World!');
 })

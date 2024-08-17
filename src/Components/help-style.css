@@ -7,7 +7,7 @@
   #faq::before{
     content: '';
   position: absolute;
-  height: 130vh;
+  height: 100%;
   top: 9vh;
   left: 0;
   right: 0;
@@ -26,7 +26,7 @@
   .faq-heading{
     font-family: "Poppins", sans-serif;
     font-size: 3rem;
-    font-weight: 300;
+    font-weight: 800;
     margin-bottom: 50px;
   }
   .faq-section {
@@ -60,7 +60,7 @@
     position: fixed;
     bottom: 0;
     left: 7vw;
-    width: 30vw;
+    width: 400px;
     background-color: #66b3b7;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
@@ -120,8 +120,28 @@
   .ask-question-content{
     z-index: 100;
   }
+  .error-message{
+    display: none;
+    color: red;
+    margin-top: 5px;
+    font-size: 0.75rem;
+}
+.ask-input{
+  display: flex;
+  flex-direction: column;
+} 
   .faq-accordion .accordion-collapse{
     border: none;
+  }
+  @media only screen and (max-width: 1148px){
+    .faq-heading{
+      font-size: 2rem;
+    }
+  }
+  @media only screen and (max-width: 970px){
+    .accordion-item{
+      width: 90%;
+    }    
   }
   @media only screen and (max-width: 920px){
     .container{
@@ -146,52 +166,65 @@
       padding: 120px 40px;   
     }
     .faq-heading{
-      font-size: 2.5rem;
+      font-size: 2rem;
+    }
+    .ask-question-content{
+      width: 250px;
+    }
+  }
+  @media only screen and (max-width: 774px){
+    #faq .container{
+      width: 100%;
+      padding: 80px 5px!important;
+      margin-top: 0;
+    }
+    .accordion-button{
+      width: 95%;
+    }
+  }
+  @media only screen and (max-width: 694px){
+    .faq-heading{
+      font-size: 1.5rem;
+    }
+    .faq-accordion .accordion-button{
+      font-size: 0.8rem!important;
+    }
+    .faq-accordion .accordion-collapse{
+      font-size: 0.75rem!important;
     }
   }
   @media only screen and (max-width: 659px){
-    .container{
-      padding: 120px 20px;   
-    }
     .faq-heading{
-      font-size: 2rem;
-    }
-    .accordion-button{
-      font-size: 1.25rem;
-    }
-    .accordion-collapse{
-      font-size: 1.25rem;
-    }
-  }
-  @media only screen and (max-width: 530px){
-    .faq-heading{
-      font-size: 1.75rem;
-    }
-    .accordion-button{
-      font-size: 1rem;
-    }
-    .accordion-collapse{
-      font-size: 1rem;
+      font-size: 1.5rem;
     }
   }
   @media only screen and (max-width: 490px){
-    .container{
-      padding: 80px 10px;
-      margin: 50px 0;   
-    }
     .faq-heading{
-      font-size: 1.75rem;
+      font-size: 1.25rem;
+    }
+    .ask-question h3{
+      font-size: 1rem!important;
+    }
+    .ask-question-content{
+      font-size: 0.75rem;
     }
     .accordion-button{
-      font-size: 1rem;
-    }
-    .accordion-collapse{
-      font-size: 1rem;
+      width: 98%;
     }
   }
-  @media only screen and (max-width: 400px){
-    .container{
-      padding: 50px 10px;
-      margin: 20px 0;   
+  @media only screen and (max-width: 372px){
+    .accordion-button{
+      width: 100%;
+    }
+  }
+  @media only screen and (max-width: 350px){
+    .faq-heading{
+      font-size: 1.5rem;
+    }
+    .faq-accordion .accordion-button{
+      font-size: 0.7rem!important;
+    }
+    .faq-accordion .accordion-collapse{
+      font-size: 0.6rem!important;
     }
   }

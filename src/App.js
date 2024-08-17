@@ -48,11 +48,11 @@ function App() {
     },
     {
       path: "/help",
-      element: <><Navbar /><Alert alert={alert} /><Help /><Footer /></>,
+      element: <><Navbar /><Alert alert={alert} /><Help showAlert={showAlert}/><Footer /></>,
     },
     {
       path: "/contact",
-      element: <><Navbar /><Alert alert={alert} /><Contact /><Footer /></>,
+      element: <><Navbar /><Alert alert={alert} /><Contact showAlert={showAlert} /><Footer /></>,
     },
     {
       path: "/services",
@@ -60,7 +60,7 @@ function App() {
     },
     {
       path: "/signup",
-      element: <><Navbar /><Alert alert={alert} /><div className="container" style={style}><Signup showAlert={showAlert} /></div><Footer /></>,
+      element: <><Navbar /><Alert alert={alert} /><Signup showAlert={showAlert} /><Footer /></>,
     },
     {
       path: "/login",

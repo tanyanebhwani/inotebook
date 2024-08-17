@@ -1,7 +1,45 @@
 import React from 'react';
 import './help-style.css';
 import { useState } from 'react';
-const Help = () => {
+const Help = (props) => {
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        let isValid = true;
+        const email = document.getElementById('email').value;
+        const question = document.getElementById('question').value;
+        console.log(question);
+        if (!email) {
+            isValid = false;
+            document.querySelector('.v-email').style.display = 'block';
+        }
+        if (!question) {
+            isValid = false;
+            document.querySelector('.v-question').style.display = 'block';
+        }
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        console.log(email);
+        if (email && !emailRegex.test(email)) {
+            isValid = false;
+            document.getElementsByClassName('v-email-valid')[0].style.display = 'block';
+        }
+        if (isValid) {
+            const response = await fetch('https://inotebook-z6r2.onrender.com/api/faq', {
+                method: 'POST',
+                headers: {
+                    'Content-type': 'application/json',
+                },
+                body: JSON.stringify({ email: email, question: question })
+            });
+            const json = await response.json();
+            console.log(json);
+            if (json.success) {
+                props.showAlert("query sent successfully", "success");
+            }
+            else {
+                props.showAlert("some problem occured", "danger");
+            }
+        }
+    }
     const [down, setDown] = useState(0);
     const expand = () => {
         console.log(document.getElementsByClassName('ask-question'));
@@ -29,7 +67,7 @@ const Help = () => {
         <>
             <section id="faq" class="faq-section">
                 <div class="container" style={style}>
-                    <h2 class="faq-heading">Frequently Asked Questions</h2>
+                    <h2 class="faq-heading">FREQUENTLY ASKED QUESTIONS</h2>
                     <div class="accordion faq-accordion" id="accordionExample">
                         <div class="accordion-item">
                             <h2 class="accordion-header">
@@ -417,16 +455,23 @@ const Help = () => {
                         <h3>Ask a question</h3>
                         <i className="fa-solid fa-angle-up" id='expand-button' onClick={expand}></i>
                     </div>
-                    <form className="ask-form">
+                    <form className="ask-form" onSubmit={handleSubmit}>
                         <div className="ask-field">
-                            <label for="email">Enter Your Email *</label>
-                            <input type="email" id="email" name="email" required />
+                            <div className="ask-input">
+                                <label for="email">Enter Your Email *</label>
+                                <input type="email" id="email" name="email" required />
+                            </div>
+                            <div className="error-message v-email">Email cannot be left blank.</div>
+                            <div className="error-message v-email-valid">Email is not valid.</div>
                         </div>
                         <div className="ask-field">
-                            <label for="question">Write your question</label>
-                            <textarea id="question" name="question" rows="4"></textarea>
+                            <div className="ask-input">
+                                <label for="question">Write your question</label>
+                                <textarea id="question" name="question" rows="4"></textarea>
+                            </div>
+                            <div className="error-message v-question">Question cannot be left blank.</div>
                         </div>
-                        <button type="submit" className="bttn btn-submit">Submit</button>
+                        <button type="submit" className="bttn btn-submit" >Submit</button>
                     </form>
                 </div>
             </section>

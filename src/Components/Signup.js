@@ -30,8 +30,9 @@ const Signup = (props) => {
             }
     }
   return (
+    <div className="signup-content">
     <div className='mt-3 signup-container'>
-        <h2 id='signupHead'>Create an Account</h2>
+        <h2 id='signupHead'>CREATE AN ACCOUNT</h2>
         <form onSubmit={handleSubmit} className='signup-form'>
                 <div className="mb-3 my-4">
                     <label htmlFor="name" className="form-label">Name</label>
@@ -52,6 +53,7 @@ const Signup = (props) => {
                 </div>
                 <button disabled={user.name<5||user.password<5||user.password!==user.cpassword||user.password<5} type="submit" className="bttn btn-log-in" id='login'>Submit</button>
             </form>
+    </div>
     </div>
   )
 }

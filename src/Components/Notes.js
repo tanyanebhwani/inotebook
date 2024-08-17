@@ -24,7 +24,7 @@ const Notes = (props) => {
   }
 
   const style = {
-    zIndex: `-2`,
+    zIndex: `2`,
     width: '70%'
   };
   useEffect(() => {

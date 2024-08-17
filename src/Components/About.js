@@ -1,4 +1,5 @@
 import React from 'react';
+import aboutImage from './about-image.jpg';
 const About = () => {
   return (
    <div className="content">
@@ -10,6 +11,7 @@ const About = () => {
         <button className="btn-read-more">Read More</button>
       </div>
       <div className="about-image">
+        <img src={aboutImage} alt="" />
       </div>
     </div>
    </div>

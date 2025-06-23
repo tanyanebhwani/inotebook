@@ -71,7 +71,8 @@
 ### 📁 Clone the Repository
 ```bash
 git clone https://github.com/yourusername/inotebook.git
-cd inotebook```
+cd inotebook
+```
 🔄 Backend Setup
 ```bash
 cd backend
@@ -79,12 +80,14 @@ npm install
 ```
 # Add your MongoDB URI and JWT_SECRET in .env
 ```bash
-npm run dev```
+npm run dev
+```
 💻 Frontend Setup
 ```bash
 cd frontend
 npm install
-npm start```
+npm start
+```
 
 Frontend runs on http://localhost:3000
 Backend runs on http://localhost:5000

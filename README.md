@@ -71,22 +71,20 @@
 ### 📁 Clone the Repository
 ```bash
 git clone https://github.com/yourusername/inotebook.git
-cd inotebook
+cd inotebook```
 🔄 Backend Setup
-bash
-Copy
-Edit
+```bash
 cd backend
-npm install
+npm install```
 # Add your MongoDB URI and JWT_SECRET in .env
-npm run dev
+```bash
+npm run dev```
 💻 Frontend Setup
-bash
-Copy
-Edit
+```bash
 cd frontend
 npm install
-npm start
+npm start```
+
 Frontend runs on http://localhost:3000
 Backend runs on http://localhost:5000
 
@@ -120,10 +118,6 @@ MIT License (or your preferred license)
 👩‍💻 Author
 Tanya Nebhwani
 GitHub
-
-vbnet
-Copy
-Edit
 
 Would you like:
 - A badge section (e.g. "Made with React", "MongoDB Atlas", etc.)?

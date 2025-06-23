@@ -76,7 +76,7 @@ cd inotebook
 🔄 Backend Setup
 ```bash
 cd backend
-npm install
+npm install cors dotenv express mongoose bcryptjs express-validator jsonwebtoken
 ```
 ### Add your MongoDB URI and JWT_SECRET in .env
 ```bash
@@ -86,7 +86,9 @@ npm run dev
 ```bash
 cd frontend
 npm install
-npm start
+npm install react-router-dom
+npm install react-bootstrap
+npm run concurrently
 ```
 
 Frontend runs on http://localhost:3000

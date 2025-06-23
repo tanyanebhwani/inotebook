@@ -5,7 +5,7 @@
 ---
 
 ## 🌐 Live Demo (Optional)
-*(Add link here if hosted)*
+https://66c0751ff1bcf745b30d5f8d--inotebookmadebytanya.netlify.app
 
 ---
 

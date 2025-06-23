@@ -96,6 +96,7 @@ Login / Signup:
 POST /api/auth/login
 POST /api/auth/createuser
 POST /api/contact
+POST /api/faq
 
 Protected Routes (Token Required):
 

@@ -93,9 +93,9 @@ Frontend runs on http://localhost:3000
 
 Backend runs on http://localhost:5000
 
-🔐 API & Authentication Flow
-Login / Signup:
+## 🔐API & Authentication Flow
 
+### Login / Signup:
 
 POST /api/auth/login
 
@@ -105,14 +105,14 @@ POST /api/contact
 
 POST /api/faq
 
-Protected Routes (Token Required):
+### Protected Routes (Token Required):
 
 GET /api/auth/getUser
 
 GET/POST/PUT/DELETE /api/notes
 
 
-🛣️ Future Enhancements
+## 🛣️Future Enhancements
 
 📌 Pinning/starred notes
 

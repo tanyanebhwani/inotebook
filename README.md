@@ -75,7 +75,8 @@ cd inotebook```
 🔄 Backend Setup
 ```bash
 cd backend
-npm install```
+npm install
+```
 # Add your MongoDB URI and JWT_SECRET in .env
 ```bash
 npm run dev```
@@ -101,10 +102,8 @@ Protected Routes (Token Required):
 GET /api/auth/getUser
 GET/POST/PUT/DELETE /api/notes
 
-Token Format: Bearer token in request headers
 
 🛣️ Future Enhancements
-🗂️ Add categories/labels to notes
 
 📌 Pinning/starred notes
 
@@ -112,12 +111,9 @@ Token Format: Bearer token in request headers
 
 ☁️ Optional file attachments
 
-📄 License
-MIT License (or your preferred license)
 
 👩‍💻 Author
 Tanya Nebhwani
-GitHub
 
 Would you like:
 - A badge section (e.g. "Made with React", "MongoDB Atlas", etc.)?

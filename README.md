@@ -94,11 +94,12 @@ Backend runs on http://localhost:5000
 Login / Signup:
 
 POST /api/auth/login
-
 POST /api/auth/createuser
+POST /api/contact
 
 Protected Routes (Token Required):
 
+GET /api/auth/getUser
 GET/POST/PUT/DELETE /api/notes
 
 Token Format: Bearer token in request headers

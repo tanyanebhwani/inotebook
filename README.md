@@ -78,7 +78,7 @@ cd inotebook
 cd backend
 npm install
 ```
-# Add your MongoDB URI and JWT_SECRET in .env
+### Add your MongoDB URI and JWT_SECRET in .env
 ```bash
 npm run dev
 ```
@@ -90,19 +90,25 @@ npm start
 ```
 
 Frontend runs on http://localhost:3000
+
 Backend runs on http://localhost:5000
 
 🔐 API & Authentication Flow
 Login / Signup:
 
+
 POST /api/auth/login
+
 POST /api/auth/createuser
+
 POST /api/contact
+
 POST /api/faq
 
 Protected Routes (Token Required):
 
 GET /api/auth/getUser
+
 GET/POST/PUT/DELETE /api/notes
 
 
